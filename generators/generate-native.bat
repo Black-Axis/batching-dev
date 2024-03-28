@@ -89,4 +89,69 @@ rem For creating folder public with its content
     )
 )
 
+rem For creating package.json file with its content
+(
+    echo {
+        echo %TAB%"name": "",
+        echo %TAB%"version": "0.0.1",
+        echo %TAB%"description": "",
+        echo %TAB%"markdown": "github",
+        echo %TAB%"license": "MIT",
+        echo %TAB%"main": "index.js",
+        echo %TAB%"licenses": [
+            echo %TAB%%TAB%{
+            echo %TAB%%TAB%%TAB%"type": "MIT",
+            echo %TAB%%TAB%%TAB%"url": "https://opensource.org/license/mit/"
+            echo %TAB%%TAB%}
+        echo %TAB%],
+        echo %TAB%"author": "Khaled Mohamed <k.mohamed.11.98@gmail.com> (https://github.com/krypton225)",
+        echo %TAB%"contributors": [
+            echo %TAB%%TAB%"Khaled Mohamed"
+        echo %TAB%],
+        echo %TAB%"bugs": {
+            echo %TAB%%TAB%"url": ""
+        echo %TAB%},
+        echo %TAB%"keywords": [
+            echo %TAB%%TAB%"SCSS",
+            echo %TAB%%TAB%"SASS",
+            echo %TAB%%TAB%"JavaScript",
+            echo %TAB%%TAB%"PostCSS"
+        echo %TAB%],
+        echo %TAB%"repository": {
+        echo %TAB%%TAB%"url": "",
+        echo %TAB%%TAB%"type": "git"
+        echo %TAB%},
+        echo %TAB%"scripts": {
+            echo %TAB%%TAB%"dev": "concurrently --prefix-colors=\"magenta,cyan,yellow,blue\" \"npm run postcss:watch\" \"npm run pug-js\" \"npm run server\" \"npm run watcher\"",
+            echo %TAB%%TAB%"start": "concurrently --prefix-colors=\"magenta,cyan,yellow\" \"npm run server\" \"npm run postcss:watch\"",
+            echo %TAB%%TAB%"watcher": "concurrently --prefix-colors=\"red\" \"npm run sass:watch\"",
+            echo %TAB%%TAB%"postcss:watch": "postcss src/styles/*.css --dir public --use autoprefixer cssnano --watch",
+            echo %TAB%%TAB%"sass:watch": "sass --no-source-map ./src/scss/:src/styles/ --watch",
+            echo %TAB%%TAB%"server": "live-server --open=./index.html",
+            echo %TAB%%TAB%"pug-js": "pug ./src/pug-js/index.pug --out ./ --watch --pretty",
+            echo %TAB%%TAB%"upgrade": "ncu --upgrade",
+            echo %TAB%%TAB%"lint": "npx stylelint ./src/scss/**/*.scss",
+            echo %TAB%%TAB%"tags": "git push repo --tags",
+            echo %TAB%%TAB%"gen:lock": "npm i --package-lock-only"
+        echo %TAB%}
+    echo }
+) > package.json
+
+rem All packages will be needed in the project
+npm i -D autoprefixer ^
+  concurrently ^
+  cssnano ^
+  live-server ^
+  npm-check-updates ^
+  postcss ^
+  postcss-cli ^
+  postcss-preset-env ^
+  pug ^
+  pug-cli ^
+  sass ^
+  sass-pire ^
+  stylelint ^
+  stylelint-config-standard-scss
+rem npm i -D autoprefixer concurrently cssnano live-server npm-check-updates postcss postcss-cli postcss-preset-env pug pug-cli sass sass-pire stylelint stylelint-config-standard-scss
+
 echo Files generated successfully.
