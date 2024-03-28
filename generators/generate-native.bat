@@ -19,15 +19,42 @@ rem For creating .gitignore file with its content
     echo *.xd
     echo.
 
-    echo # Avoid your project being littered with annoying .DS_Store files!
+    echo # Avoid all following files
     echo ###############################################
     echo.
     echo .DS_Store
     echo .prettierignore
+    echo Thumbs.db
+    echo.
 
     echo node_modules
     echo /.vscode/*
     echo !.vscode/settings.json
+    echo.
+
+    echo *.sublime-project
+    echo *.sublime-workspace
+    echo *.idea/
+    echo.
+
+    echo *.suo
+    echo *.ntvs*
+    echo *.log
+    echo *.log.*
+    echo *.tmp
+    echo.
+
+    echo .env
+    echo .env.local
+    echo .env.*.local
+    echo .env.test
+    echo .env.production
+
+    echo.
+    echo /bower_components/
+    echo *.pyc
+    echo *.class
+    echo *.jar
     echo.
 
     echo # Add your custom under the following line
@@ -154,4 +181,5 @@ npm i -D autoprefixer ^
   stylelint-config-standard-scss
 rem npm i -D autoprefixer concurrently cssnano live-server npm-check-updates postcss postcss-cli postcss-preset-env pug pug-cli sass sass-pire stylelint stylelint-config-standard-scss
 
-echo Files generated successfully.
+echo Files generated successfully!
+echo Hack your world strongly!
