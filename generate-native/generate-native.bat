@@ -289,3 +289,5 @@ echo ✨ All packages was installed successfully!
 echo All files were generated successfully! ✨
 
 echo Hack your world strongly! ✨
+
+code .
