@@ -226,6 +226,14 @@ echo ✨ _space.pug file was created successfully!
 
 echo ✨ _no-script.pug file was created successfully!
 
+@REM Define the content of the src/pug-js/mixins/global/index.pug file
+(
+    echo include ./_no-script
+    echo include ./_space
+) > "src\pug-js\mixins\global\_index.pug"
+
+echo ✨ index.pug file of global directory was created successfully!
+
 @REM Generate LICENSE.md file with its content
 for /F "tokens=1,2,3 delims=/" %%a in ("%DATE%") do (
     set "current_year=%%c"
