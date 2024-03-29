@@ -4,7 +4,7 @@ echo Generating files ...
 
 set "TAB=    "
 
-rem For creating .gitignore file with its content
+@REM For creating .gitignore file with its content
 (
     echo # Avoid accidental upload of the Sketch and Figma design files
     echo #####################################################
@@ -61,11 +61,11 @@ rem For creating .gitignore file with its content
     echo ###############################################
 ) > .gitignore
 
-rem For creating folder src with its content
-rem For creating folder public with its content
+@REM For creating folder src with its content
+@REM For creating folder public with its content
 (
 
-    rem Create directories for source files
+    @REM Create directories for source files
     mkdir src\styles 2>nul
 
     if errorlevel 1 (
@@ -90,7 +90,7 @@ rem For creating folder public with its content
         echo src\js directory created successfully.
     )
 
-    rem Create directories for public assets
+    @REM Create directories for public assets
     mkdir public\assets\favicons 2>nul
 
     if errorlevel 1 (
@@ -116,7 +116,7 @@ rem For creating folder public with its content
     )
 )
 
-rem For creating package.json file with its content
+@REM For creating package.json file with its content
 (
     echo {
         echo %TAB%"name": "",
@@ -164,7 +164,7 @@ rem For creating package.json file with its content
     echo }
 ) > package.json
 
-rem All packages will be needed in the project
+@REM All packages will be needed in the project
 npm i -D autoprefixer ^
   concurrently ^
   cssnano ^
@@ -179,14 +179,14 @@ npm i -D autoprefixer ^
   sass-pire ^
   stylelint ^
   stylelint-config-standard-scss
-rem npm i -D autoprefixer concurrently cssnano live-server npm-check-updates postcss postcss-cli postcss-preset-env pug pug-cli sass sass-pire stylelint stylelint-config-standard-scss
+@REM npm i -D autoprefixer concurrently cssnano live-server npm-check-updates postcss postcss-cli postcss-preset-env pug pug-cli sass sass-pire stylelint stylelint-config-standard-scss
 
-REM Generate LICENSE.md file with its content
+@REM Generate LICENSE.md file with its content
 for /F "tokens=1,2,3 delims=/" %%a in ("%DATE%") do (
     set "current_year=%%c"
 )
 
-rem Define TAB as a tab character
+@REM Define TAB as a tab character
 for /f "delims=" %%t in ('forfiles /p "%~dp0." /m "%~nx0" /c "cmd /c echo/09"') do set "TAB=%%t"
 
 (
