@@ -240,34 +240,22 @@ echo ✨ index.pug file of mixins directory was created successfully!
 )
 
 @REM Define the content of the src/scss/components/_index.scss file
-(
-    echo
-    echo.
-) > "src\scss\components\_index.scss"
+echo. > "src\scss\components\_index.scss"
 
 echo ✨ index.scss file of components directory was created successfully!
 
 @REM Define the content of the src/scss/vendors/_index.scss file
-(
-    echo
-    echo.
-) > "src\scss\vendors\_index.scss"
+echo. > "src\scss\vendors\_index.scss"
 
 echo ✨ index.scss file of vendors directory was created successfully!
 
 @REM Define the content of the src/scss/layout/_index.scss file
-(
-    echo
-    echo.
-) > "src\scss\layout\_index.scss"
+echo. > "src\scss\layout\_index.scss"
 
 echo ✨ index.scss file of layout directory was created successfully!
 
 @REM Define the content of the src/scss/pages/_index.scss file
-(
-    echo
-    echo.
-) > "src\scss\pages\_index.scss"
+echo. > "src\scss\pages\_index.scss"
 
 echo ✨ index.scss file of pages directory was created successfully!
 
