@@ -181,5 +181,39 @@ npm i -D autoprefixer ^
   stylelint-config-standard-scss
 rem npm i -D autoprefixer concurrently cssnano live-server npm-check-updates postcss postcss-cli postcss-preset-env pug pug-cli sass sass-pire stylelint stylelint-config-standard-scss
 
+REM Generate LICENSE.md file with its content
+for /F "tokens=1,2,3 delims=/" %%a in ("%DATE%") do (
+    set "current_year=%%c"
+)
+
+rem Define TAB as a tab character
+for /f "delims=" %%t in ('forfiles /p "%~dp0." /m "%~nx0" /c "cmd /c echo/09"') do set "TAB=%%t"
+
+(
+    echo MIT License
+    echo.
+    echo Copyright ^(^c^)^ %current_year% Khaled Mohamed
+    echo.
+    echo Permission is hereby granted, free of charge, to any person obtaining a copy
+    echo of this software and associated documentation files ^(^the "Software"^)^, to deal
+    echo in the Software without restriction, including without limitation the rights
+    echo to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    echo copies of the Software, and to permit persons to whom the Software is
+    echo furnished to do so, subject to the following conditions:
+    echo.
+
+    echo The above copyright notice and this permission notice shall be included in all
+    echo copies or substantial portions of the Software.
+
+    echo.
+    echo THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    echo IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    echo FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    echo AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    echo LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    echo OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    echo SOFTWARE.
+) > LICENSE.md
+
 echo Files generated successfully!
 echo Hack your world strongly!
