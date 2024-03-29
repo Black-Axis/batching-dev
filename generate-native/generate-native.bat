@@ -230,5 +230,49 @@ for /f "delims=" %%t in ('forfiles /p "%~dp0." /m "%~nx0" /c "cmd /c echo/09"') 
     echo.
 ) > SECURITY.md
 
+@REM Add .stylelintrc file with its content
+@echo off
+
+rem Echo the content directly into the .stylelintrc file
+(
+    echo { 
+    echo     "plugins": ["stylelint-scss"],
+    echo     "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
+    echo     "ignoreFiles": ["dist/styles.css", "dist/test-styles.css", "dist/styles.min.css"],
+    echo     "rules": {
+    echo         "indentation": 4,
+    echo         "max-empty-lines": 1,
+    echo         "number-max-precision": 3,
+    echo         "declaration-no-important": true,
+    echo         "declaration-block-no-duplicate-properties": true,
+    echo         "declaration-block-single-line-max-declarations": 1,
+    echo         "declaration-block-trailing-semicolon": "always",
+    echo         "declaration-colon-space-before": "never",
+    echo         "declaration-colon-space-after": "always",
+    echo         "no-extra-semicolons": true,
+    echo         "font-weight-notation": "numeric",
+    echo         "property-case": "lower",
+    echo         "selector-type-case": "lower",
+    echo         "function-name-case": "lower",
+    echo         "value-keyword-case": "lower",
+    echo         "at-rule-no-unknown": null,
+    echo         "string-quotes": "double",
+    echo         "scss/selector-no-redundant-nesting-selector": true,
+    echo         "block-no-empty": true,
+    echo         "comment-no-empty": true,
+    echo         "at-rule-name-case": "lower",
+    echo         "at-rule-semicolon-newline-after": "always",
+    echo         "comment-empty-line-before": "always",
+    echo         "color-hex-case": "lower",
+    echo         "color-hex-length": "long",
+    echo         "color-named": "never",
+    echo         "unit-case": "lower",
+    echo         "no-empty-source": null
+    echo     }
+    echo }
+) > .stylelintrc
+
+echo .stylelintrc file created successfully!
+
 echo Files generated successfully!
 echo Hack your world strongly!
