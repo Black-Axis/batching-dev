@@ -2,5 +2,5 @@
 
 !.gitignore
 
-!generators
+!generate-*
 !*.bat
