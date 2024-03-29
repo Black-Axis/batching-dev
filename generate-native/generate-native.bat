@@ -126,12 +126,14 @@ echo ✨ public folder was created successfully!
         echo %TAB%%TAB%"type": "git"
         echo %TAB%},
         echo %TAB%"scripts": {
-            echo %TAB%%TAB%"dev": "concurrently --prefix-colors=\"magenta,cyan,yellow,blue\" \"npm run postcss:watch\" \"npm run pug-js\" \"npm run server\" \"npm run watcher\"",
-            echo %TAB%%TAB%"start": "concurrently --prefix-colors=\"magenta,cyan,yellow\" \"npm run server\" \"npm run postcss:watch\"",
+            echo %TAB%%TAB%"dev": "concurrently --prefix-colors=\"magenta,cyan,white,yellow,blue\" \"npm run postcss:watch\" \"npm run pug-js\" \"npm run server\" \"npm run watcher\" \"npm run out-wpk-dev\"",
+            echo %TAB%%TAB%"start": "concurrently --prefix-colors=\"magenta,cyan,yellow\" \"npm run server\" \"npm run postcss:watch\" \"npm run out-wpk-production\"",
             echo %TAB%%TAB%"watcher": "concurrently --prefix-colors=\"red\" \"npm run sass:watch\"",
             echo %TAB%%TAB%"postcss:watch": "postcss src/styles/*.css --dir public --use autoprefixer cssnano --watch",
             echo %TAB%%TAB%"sass:watch": "sass --no-source-map ./src/scss/:src/styles/ --watch",
             echo %TAB%%TAB%"server": "live-server --open=./index.html",
+            echo %TAB%%TAB%"out-wpk-dev": "webpack --mode=development --watch",
+            echo %TAB%%TAB%"out-wpk-production": "webpack --mode=production",
             echo %TAB%%TAB%"pug-js": "pug ./src/pug-js/index.pug --out ./ --watch --pretty",
             echo %TAB%%TAB%"upgrade": "ncu --upgrade",
             echo %TAB%%TAB%"lint": "npx stylelint ./src/scss/**/*.scss",
@@ -141,7 +143,26 @@ echo ✨ public folder was created successfully!
     echo }
 ) > package.json
 
+@REM Define the content of the src/js/index/js file
+echo > "src\js\index.js"
+
 echo ✨ package.json file was created successfully!
+
+(
+    echo const path ^=^ require^(^"path");
+    echo.
+    echo module.exports ^=^ {
+    echo.
+    echo    entry: "./src/js/index.js",
+    echo    output: {
+    echo       filename: "main.bundle.js",
+    echo       path: path.resolve^(^__dirname, "public"^),
+    echo    },
+    echo ^}^;
+    echo.
+) > webpack.config.js
+
+echo ✨ webpack.config.js file was created successfully!
 
 @REM Define the content of the src/pug-js/mixins/global/_space.pug file
 (
@@ -302,6 +323,8 @@ echo ✨ index.scss file of scss directory was created successfully!
     echo.
     echo     +space^(^)
     echo.
+    echo     script^(^src^=^"./public/main.bundle.js")
+    echo.
     echo     +no-script^(^)
 ) > "src\pug-js\index.pug"
 
@@ -418,7 +441,9 @@ npm i -D autoprefixer ^
   sass ^
   sass-pire ^
   stylelint ^
-  stylelint-config-standard-scss
+  stylelint-config-standard-scss ^
+  webpack ^
+  webpack-cli
 
 echo ✨ All packages was installed successfully!
 
