@@ -221,6 +221,8 @@ echo ✨ index.pug file of global directory was created successfully!
     echo include ./global/_index
 ) > "src\pug-js\mixins\_index.pug"
 
+echo ✨ index.pug file of mixins directory was created successfully!
+
 @REM Define the content of the src/scss/index.scss file
 (
     echo @use "../../node_modules/sass-pire/src/sass-pire.scss" as *;
