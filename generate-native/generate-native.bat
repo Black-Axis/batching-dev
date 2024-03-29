@@ -70,84 +70,24 @@ echo ✨ .stylelintrc file was created successfully!
     @REM Create directories for source files
     mkdir src\styles 2>nul
 
-    if errorlevel 1 (
-        echo Failed to create src\styles directory.
-    ) else (
-        echo src\styles directory created successfully.
-    )
-
     mkdir src\scss 2>nul
-
-    if errorlevel 1 (
-        echo Failed to create src\scss directory.
-    ) else (
-        echo src\scss directory created successfully.
-    )
 
     mkdir src\js 2>nul
 
-    if errorlevel 1 (
-        echo Failed to create src\js directory.
-    ) else (
-        echo src\js directory created successfully.
-    )
-
     mkdir src\pug-js 2>nul
-
-    if errorlevel 1 (
-        echo Failed to create src\pug-js directory.
-    ) else (
-        echo src\pug-js directory created successfully.
-    )
 
     mkdir src\pug-js\mixins 2>nul
 
-    if errorlevel 1 (
-        echo Failed to create src\pug-js\mixins directory.
-    ) else (
-        echo src\pug-js\mixins directory created successfully.
-    )
-
     mkdir src\pug-js\mixins\global 2>nul
 
-    if errorlevel 1 (
-        echo Failed to create src\pug-js\mixins\global directory.
-    ) else (
-        echo src\pug-js\mixins\global directory created successfully.
-    )
-
     mkdir src\pug-js\mixins\meta 2>nul
-
-    if errorlevel 1 (
-        echo Failed to create src\pug-js\mixins\meta directory.
-    ) else (
-        echo src\pug-js\mixins\meta directory created successfully.
-    )
 
     @REM Create directories for public assets
     mkdir public\assets\favicons 2>nul
 
-    if errorlevel 1 (
-        echo Failed to create public\assets\favicons directory.
-    ) else (
-        echo public\assets\favicons directory created successfully.
-    )
-
     mkdir public\assets\fonts 2>nul
 
-    if errorlevel 1 (
-        echo Failed to create public\assets\fonts directory.
-    ) else (
-        echo public\assets\fonts directory created successfully.
-    )
-
     mkdir public\assets\images 2>nul
-
-    if errorlevel 1 (
-        echo Failed to create public\assets\images directory.
-    ) else (
-        echo public\assets\images directory created successfully.
-    )
 )
 
 echo ✨ src folder was created successfully!
