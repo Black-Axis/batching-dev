@@ -205,6 +205,14 @@ echo ✨ index.pug file of global directory was created successfully!
     echo.
 ) > "src\pug-js\mixins\meta\_meta.pug"
 
+
+@REM Define the content of the src/pug-js/mixins/meta/_index.pug file
+(
+    echo include ./_meta
+) > "src\pug-js\mixins\meta\_index.pug"
+
+echo ✨ index.pug file of global directory was created successfully!
+
 echo ✨ meta.pug file of meta directory was created successfully!
 
 @REM Define the content of the src/pug-js/index.pug file
