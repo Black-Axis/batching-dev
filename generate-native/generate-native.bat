@@ -61,6 +61,8 @@ set "TAB=    "
     echo ###############################################
 ) > .gitignore
 
+echo ✨ .stylelintrc file was created successfully!
+
 @REM For creating folder src with its content
 @REM For creating folder public with its content
 (
@@ -116,6 +118,9 @@ set "TAB=    "
     )
 )
 
+echo ✨ src folder was created successfully!
+echo ✨ public folder was created successfully!
+
 @REM For creating package.json file with its content
 (
     echo {
@@ -164,22 +169,7 @@ set "TAB=    "
     echo }
 ) > package.json
 
-@REM All packages will be needed in the project
-@REM npm i -D autoprefixer ^
-  concurrently ^
-  cssnano ^
-  live-server ^
-  npm-check-updates ^
-  postcss ^
-  postcss-cli ^
-  postcss-preset-env ^
-  pug ^
-  pug-cli ^
-  sass ^
-  sass-pire ^
-  stylelint ^
-  stylelint-config-standard-scss
-@REM npm i -D autoprefixer concurrently cssnano live-server npm-check-updates postcss postcss-cli postcss-preset-env pug pug-cli sass sass-pire stylelint stylelint-config-standard-scss
+echo ✨ package.json file was created successfully!
 
 @REM Generate LICENSE.md file with its content
 for /F "tokens=1,2,3 delims=/" %%a in ("%DATE%") do (
@@ -215,6 +205,8 @@ for /f "delims=" %%t in ('forfiles /p "%~dp0." /m "%~nx0" /c "cmd /c echo/09"') 
     echo SOFTWARE.
 ) > LICENSE.md
 
+echo ✨ LICENSE.md file was created successfully!
+
 @REM Add SECURITY.md file with its content
 (
     echo # Reporting Security Issues
@@ -229,6 +221,8 @@ for /f "delims=" %%t in ('forfiles /p "%~dp0." /m "%~nx0" /c "cmd /c echo/09"') 
     echo We'll endeavor to respond quickly, and will keep you updated throughout the process.
     echo.
 ) > SECURITY.md
+
+echo ✨ SECURITY.md file was created successfully!
 
 @REM Add .stylelintrc file with its content
 @echo off
@@ -272,7 +266,26 @@ rem Echo the content directly into the .stylelintrc file
     echo }
 ) > .stylelintrc
 
-echo .stylelintrc file created successfully!
+echo ✨ .stylelintrc file was created successfully!
 
-echo Files generated successfully!
-echo Hack your world strongly!
+@REM All packages will be needed in the project
+npm i -D autoprefixer ^
+  concurrently ^
+  cssnano ^
+  live-server ^
+  npm-check-updates ^
+  postcss ^
+  postcss-cli ^
+  postcss-preset-env ^
+  pug ^
+  pug-cli ^
+  sass ^
+  sass-pire ^
+  stylelint ^
+  stylelint-config-standard-scss
+
+echo ✨ All packages was installed successfully!
+
+echo All files were generated successfully! ✨
+
+echo Hack your world strongly! ✨
