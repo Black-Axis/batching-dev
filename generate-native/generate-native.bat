@@ -165,7 +165,7 @@ set "TAB=    "
 ) > package.json
 
 @REM All packages will be needed in the project
-npm i -D autoprefixer ^
+@REM npm i -D autoprefixer ^
   concurrently ^
   cssnano ^
   live-server ^
@@ -214,6 +214,21 @@ for /f "delims=" %%t in ('forfiles /p "%~dp0." /m "%~nx0" /c "cmd /c echo/09"') 
     echo OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     echo SOFTWARE.
 ) > LICENSE.md
+
+@REM Add SECURITY.md file with its content
+(
+    echo # Reporting Security Issues
+    echo.
+
+    echo The sass-pire team and community take security issues in the library seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
+    echo.
+
+    echo To report a security issue, email ^[^k.mohamed.11.98@gmail.com^]^(^mailto:k.mohamed.11.98@gmail.com^)^ and include the word "SECURITY-SASS-Pire" in the subject line.
+    echo.
+
+    echo We'll endeavor to respond quickly, and will keep you updated throughout the process.
+    echo.
+) > SECURITY.md
 
 echo Files generated successfully!
 echo Hack your world strongly!
