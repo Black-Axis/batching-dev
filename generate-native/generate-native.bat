@@ -212,7 +212,7 @@ echo ✨ LICENSE.md file was created successfully!
     echo # Reporting Security Issues
     echo.
 
-    echo The sass-pire team and community take security issues in the library seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
+    echo We take security issues in our project seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
     echo.
 
     echo To report a security issue, email ^[^k.mohamed.11.98@gmail.com^]^(^mailto:k.mohamed.11.98@gmail.com^)^ and include the word "SECURITY-SASS-Pire" in the subject line.
