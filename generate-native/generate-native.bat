@@ -211,6 +211,21 @@ echo ✨ package.json file was created successfully!
     echo    ^|
 ) > "src\pug-js\mixins\global\_space.pug"
 
+echo ✨ _space.pug file was created successfully!
+
+@REM Define the content of the src/pug-js/mixins/global/_no-script.pug file
+(
+    echo include ./_space
+    echo.
+    echo mixin no-script^(^)
+    echo.
+    echo    +space^(^)
+    echo.
+    echo    noscript You need to enable JavaScript to run this app.
+) > "src\pug-js\mixins\global\_no-script.pug"
+
+echo ✨ _no-script.pug file was created successfully!
+
 @REM Generate LICENSE.md file with its content
 for /F "tokens=1,2,3 delims=/" %%a in ("%DATE%") do (
     set "current_year=%%c"
