@@ -174,6 +174,72 @@ echo ✨ _no-script.pug file was created successfully!
 
 echo ✨ index.pug file of global directory was created successfully!
 
+@REM Define the content of the src/pug-js/mixins/meta/_meta.pug file
+(
+    echo include ../global/_space
+    echo.
+    echo mixin meta-data^(^author ^=^ "Author Name"^)
+    echo     meta^(^charset^=^"UTF-8")
+    echo     meta^(^http-equiv^=^"Content-Type" content="text/html;charset=UTF-8")
+    echo     meta^(^http-equiv^=^"X-UA-Compatible" content="ie=edge")
+    echo     meta^(^http-equiv^=^"X-UA-Compatible" content="IE=7")
+    echo     meta^(^name^=^"viewport" content="width=device-width, initial-scale=1.0")
+    echo     +space^(^)
+    echo     meta^(^name^=^"author" content=author)
+    echo     +space^(^)
+    echo.
+
+    echo mixin meta-desc^(^contentOfDescription^)
+    echo     meta^(^name^=^"description" content=contentOfDescription)
+    echo     +space^(^)
+    echo.
+
+    echo mixin meta-words^(^words^)
+    echo     meta^(^name^=^"keywords", content=words)
+    echo     +space^(^)
+    echo.
+
+    echo mixin meta-theme^(^color^)
+    echo     meta^(^name^=^"theme-color" content=color)
+    echo     +space^(^)
+    echo.
+) > "src\pug-js\mixins\meta\_meta.pug"
+
+echo ✨ meta.pug file of meta directory was created successfully!
+
+@REM Define the content of the src/pug-js/index.pug file
+(
+    echo include ./mixins/_index
+    echo.
+    echo doctype html
+    echo html^(^lang^=^"en")
+    echo.
+    echo head
+    echo     +meta-data^(^"Khaled Mohamed")
+    echo     +meta-desc^(^"Just a description for Manage Landing Page project as landing page!")
+    echo     +meta-words^(^"HTML, PugJS, CSS, SCSS, PostCSS")
+    echo     +meta-theme^(^"")
+    echo.
+    echo     link^(^rel^=^"shortcut icon" href="./public/assets/favicons/favicon.ico" type="image/x-icon")
+    echo     link^(^rel^=^"manifest" href="./public/assets/favicons/site.webmanifest")
+    echo.
+    echo     +space^(^)
+    echo.
+    echo     title 
+    echo.
+    echo     +space^(^)
+    echo     link^(^rel^=^"stylesheet" href="./public/index.css")
+    echo.
+    echo body
+    echo     main^(^class^=^"main" id="main")
+    echo.
+    echo     +space^(^)
+    echo.
+    echo     +no-script^(^)
+) > "src\pug-js\index.pug"
+
+echo ✨ index.pug file was created successfully!
+
 @REM Generate LICENSE.md file with its content
 for /F "tokens=1,2,3 delims=/" %%a in ("%DATE%") do (
     set "current_year=%%c"
