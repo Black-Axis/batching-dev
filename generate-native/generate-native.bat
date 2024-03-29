@@ -61,7 +61,7 @@ set "TAB=    "
     echo ###############################################
 ) > .gitignore
 
-echo ✨ .stylelintrc file was created successfully!
+echo ➤ .stylelintrc file was created successfully!
 
 @REM For creating folder src with its content
 @REM For creating folder public with its content
@@ -90,8 +90,8 @@ echo ✨ .stylelintrc file was created successfully!
     mkdir public\assets\images 2>nul
 )
 
-echo ✨ src folder was created successfully!
-echo ✨ public folder was created successfully!
+echo ➤ src folder was created successfully!
+echo ➤ public folder was created successfully!
 
 @REM For creating package.json file with its content
 (
@@ -146,7 +146,7 @@ echo ✨ public folder was created successfully!
 @REM Define the content of the src/js/index/js file
 echo > "src\js\index.js"
 
-echo ✨ package.json file was created successfully!
+echo ➤ package.json file was created successfully!
 
 (
     echo const path ^=^ require^(^"path");
@@ -162,7 +162,7 @@ echo ✨ package.json file was created successfully!
     echo.
 ) > webpack.config.js
 
-echo ✨ webpack.config.js file was created successfully!
+echo ➤ webpack.config.js file was created successfully!
 
 @REM Define the content of the src/pug-js/mixins/global/_space.pug file
 (
@@ -172,7 +172,7 @@ echo ✨ webpack.config.js file was created successfully!
     echo    ^|
 ) > "src\pug-js\mixins\global\_space.pug"
 
-echo ✨ _space.pug file was created successfully!
+echo ➤ _space.pug file was created successfully!
 
 @REM Define the content of the src/pug-js/mixins/global/_no-script.pug file
 (
@@ -185,7 +185,7 @@ echo ✨ _space.pug file was created successfully!
     echo    noscript You need to enable JavaScript to run this app.
 ) > "src\pug-js\mixins\global\_no-script.pug"
 
-echo ✨ _no-script.pug file was created successfully!
+echo ➤ _no-script.pug file was created successfully!
 
 @REM Define the content of the src/pug-js/mixins/global/index.pug file
 (
@@ -193,7 +193,7 @@ echo ✨ _no-script.pug file was created successfully!
     echo include ./_space
 ) > "src\pug-js\mixins\global\_index.pug"
 
-echo ✨ index.pug file of global directory was created successfully!
+echo ➤ index.pug file of global directory was created successfully!
 
 @REM Define the content of the src/pug-js/mixins/meta/_meta.pug file
 (
@@ -226,14 +226,14 @@ echo ✨ index.pug file of global directory was created successfully!
     echo.
 ) > "src\pug-js\mixins\meta\_meta.pug"
 
-echo ✨ meta.pug file of meta directory was created successfully!
+echo ➤ meta.pug file of meta directory was created successfully!
 
 @REM Define the content of the src/pug-js/mixins/meta/_index.pug file
 (
     echo include ./_meta
 ) > "src\pug-js\mixins\meta\_index.pug"
 
-echo ✨ index.pug file of global directory was created successfully!
+echo ➤ index.pug file of global directory was created successfully!
 
 @REM Define the content of the src/pug-js/mixins/_index.pug file
 (
@@ -242,7 +242,7 @@ echo ✨ index.pug file of global directory was created successfully!
     echo include ./global/_index
 ) > "src\pug-js\mixins\_index.pug"
 
-echo ✨ index.pug file of mixins directory was created successfully!
+echo ➤ index.pug file of mixins directory was created successfully!
 
 @REM For creating folder src with its content
 @REM For creating folder public with its content
@@ -263,22 +263,22 @@ echo ✨ index.pug file of mixins directory was created successfully!
 @REM Define the content of the src/scss/components/_index.scss file
 echo. > "src\scss\components\_index.scss"
 
-echo ✨ index.scss file of components directory was created successfully!
+echo ➤ index.scss file of components directory was created successfully!
 
 @REM Define the content of the src/scss/vendors/_index.scss file
 echo. > "src\scss\vendors\_index.scss"
 
-echo ✨ index.scss file of vendors directory was created successfully!
+echo ➤ index.scss file of vendors directory was created successfully!
 
 @REM Define the content of the src/scss/layout/_index.scss file
 echo. > "src\scss\layout\_index.scss"
 
-echo ✨ index.scss file of layout directory was created successfully!
+echo ➤ index.scss file of layout directory was created successfully!
 
 @REM Define the content of the src/scss/pages/_index.scss file
 echo. > "src\scss\pages\_index.scss"
 
-echo ✨ index.scss file of pages directory was created successfully!
+echo ➤ index.scss file of pages directory was created successfully!
 
 @REM Define the content of the src/scss/index.scss file
 (
@@ -293,7 +293,7 @@ echo ✨ index.scss file of pages directory was created successfully!
     echo @use "./pages";
 ) > "src\scss\index.scss"
 
-echo ✨ index.scss file of scss directory was created successfully!
+echo ➤ index.scss file of scss directory was created successfully!
 
 @REM Define the content of the src/pug-js/index.pug file
 (
@@ -328,7 +328,7 @@ echo ✨ index.scss file of scss directory was created successfully!
     echo     +no-script^(^)
 ) > "src\pug-js\index.pug"
 
-echo ✨ index.pug file was created successfully!
+echo ➤ index.pug file was created successfully!
 
 @REM Generate LICENSE.md file with its content
 for /F "tokens=1,2,3 delims=/" %%a in ("%DATE%") do (
@@ -364,7 +364,7 @@ for /f "delims=" %%t in ('forfiles /p "%~dp0." /m "%~nx0" /c "cmd /c echo/09"') 
     echo SOFTWARE.
 ) > LICENSE.md
 
-echo ✨ LICENSE.md file was created successfully!
+echo ➤ LICENSE.md file was created successfully!
 
 @REM Add SECURITY.md file with its content
 (
@@ -381,7 +381,7 @@ echo ✨ LICENSE.md file was created successfully!
     echo.
 ) > SECURITY.md
 
-echo ✨ SECURITY.md file was created successfully!
+echo ➤ SECURITY.md file was created successfully!
 
 @REM Add .stylelintrc file with its content
 @echo off
@@ -425,7 +425,7 @@ rem Echo the content directly into the .stylelintrc file
     echo }
 ) > .stylelintrc
 
-echo ✨ .stylelintrc file was created successfully!
+echo ➤ .stylelintrc file was created successfully!
 
 @REM All packages will be needed in the project
 npm i -D autoprefixer ^
@@ -445,10 +445,10 @@ npm i -D autoprefixer ^
   webpack ^
   webpack-cli
 
-echo ✨ All packages was installed successfully!
+echo ➤ All packages was installed successfully!
 
-echo All files were generated successfully! ✨
+echo All files were generated successfully! ➤
 
-echo Hack your world strongly! ✨
+echo Hack your world strongly! ➤
 
 code .
