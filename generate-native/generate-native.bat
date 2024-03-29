@@ -203,6 +203,14 @@ echo ✨ public folder was created successfully!
 
 echo ✨ package.json file was created successfully!
 
+@REM Define the content of the src/pug-js/mixins/global/_space.pug file
+(
+    echo mixin space^(^)
+    echo    ^=^ " "
+    echo    ^|
+    echo    ^|
+) > "src\pug-js\mixins\global\_space.pug"
+
 @REM Generate LICENSE.md file with its content
 for /F "tokens=1,2,3 delims=/" %%a in ("%DATE%") do (
     set "current_year=%%c"
