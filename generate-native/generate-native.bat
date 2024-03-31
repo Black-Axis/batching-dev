@@ -445,10 +445,10 @@ npm i -D autoprefixer ^
   webpack ^
   webpack-cli
 
+code .
+
 echo ➤ All packages was installed successfully!
 
-echo All files were generated successfully! ➤
+echo ➤ All files were generated successfully!
 
-echo Hack your world strongly! ➤
-
-code .
+echo ➤ Hack your world strongly!
