@@ -144,7 +144,7 @@ echo ➤ public folder was created successfully!
 ) > package.json
 
 @REM Define the content of the src/js/index/js file
-echo > "src\js\index.js"
+echo. "src\js\index.js"
 
 echo ➤ package.json file was created successfully!
 
