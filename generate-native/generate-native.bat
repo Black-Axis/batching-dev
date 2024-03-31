@@ -302,30 +302,30 @@ echo ➤ index.scss file of scss directory was created successfully!
     echo doctype html
     echo html^(^lang^=^"en")
     echo.
-    echo head
-    echo     +meta-data^(^"Khaled Mohamed")
-    echo     +meta-desc^(^"Just a description for Manage Landing Page project as landing page!")
-    echo     +meta-words^(^"HTML, PugJS, CSS, SCSS, PostCSS")
-    echo     +meta-theme^(^"")
+    echo     head
+    echo         +meta-data^(^"Khaled Mohamed")
+    echo         +meta-desc^(^"Just a description for Manage Landing Page project as landing page!")
+    echo         +meta-words^(^"HTML, PugJS, CSS, SCSS, PostCSS")
+    echo         +meta-theme^(^"")
     echo.
-    echo     link^(^rel^=^"shortcut icon" href="./public/assets/favicons/favicon.ico" type="image/x-icon")
-    echo     link^(^rel^=^"manifest" href="./public/assets/favicons/site.webmanifest")
+    echo         link^(^rel^=^"shortcut icon" href="./public/assets/favicons/favicon.ico" type="image/x-icon")
+    echo         link^(^rel^=^"manifest" href="./public/assets/favicons/site.webmanifest")
     echo.
-    echo     +space^(^)
+    echo         +space^(^)
     echo.
-    echo     title 
+    echo         title 
     echo.
-    echo     +space^(^)
-    echo     link^(^rel^=^"stylesheet" href="./public/index.css")
+    echo         +space^(^)
+    echo         link^(^rel^=^"stylesheet" href="./public/index.css")
     echo.
-    echo body
-    echo     main^(^class^=^"main" id="main")
+    echo     body
+    echo         main^(^class^=^"main" id="main")
     echo.
-    echo     +space^(^)
+    echo         +space^(^)
     echo.
-    echo     script^(^src^=^"./public/main.bundle.js")
+    echo         script^(^src^=^"./public/main.bundle.js")
     echo.
-    echo     +no-script^(^)
+    echo         +no-script^(^)
 ) > "src\pug-js\index.pug"
 
 echo ➤ index.pug file was created successfully!
